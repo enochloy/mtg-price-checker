@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Singles Price Checker
+{% endblock %}
+
+{% block main %}
+
+<div class="container mt-5">
+    <h1>Singles Price Checker</h1>
+    <hr>
+    <input class="form-control form-class" autocomplete="off" autofocus placeholder="Card Name" type="search">
+</div>
+
+<div class="container mt-3 mb-5">
+        {% for store in stores %}
+        <div class="form-check form-check-inline">
+            <input class="form-check-input form-class" type="checkbox" id="{{ store }}singlechecker" value="{{ store }}" checked>
+            <label class="form-check-label" for="{{ store }}singlechecker">{{ store }}</label>
+        </div>
+        {% endfor %}
+</div>
+
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Card Name</th>
+                <th>Price</th>
+                <th>Store</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Search results will be dynamically inserted here -->
+        </tbody>
+    </table>
+</div>
+
+<script src="static/singlechecker.js"></script>
+{% endblock %}

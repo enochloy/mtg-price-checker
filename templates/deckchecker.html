@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Deck Price Checker
+{% endblock %}
+
+{% block main %}
+<div class="container py-5">
+    <h1>Deck Price Checker</h1>
+    <hr>
+    <div class="d-flex justify-content-center">
+        <div class="form-group">
+            <label for="decklist">Enter decklist</label>
+            <textarea class="form-control" id="decklist" rows="10" cols="50" placeholder="Enter only in MTGO format (e.g. 1 Command Tower)"></textarea>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+    {% for store in stores %}
+    <div class="form-check form-check-inline">
+        <input class="form-check-input form-class" type="checkbox" id="{{ store }}deckchecker" value="{{ store }}" checked>
+        <label class="form-check-label" for="{{ store }}deckchecker">{{ store }}</label>
+    </div>
+    {% endfor %}
+    </div>
+
+    <div class="d-flex justify-content-center mt-5">
+        <button id="deckcheckerbutton" class="btn btn-success">Check Price</button>
+    </div>
+
+    <div class="d-flex justify-content-center mt-3">
+        <div class="spinner-border" role="status">
+              <span class="sr-only"></span>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="tablesContainer">
+    <!-- Tables will be dynamically inserted here -->
+</div>
+
+<script src="static/deckchecker.js"></script>
+{% endblock %}

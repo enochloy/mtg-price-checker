@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <form action="/register" method="post">
+                <div class="mb-3">
+                    <label class="form-label" for="registerInputName">Username</label>
+                    <input type="text" class="form-control" id="registerInputName" name="username" placeholder="Username" autocomplete="off" autofocus>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="registerInputPassword">Password</label>
+                    <input type="password" class="form-control" id="registerInputPassword" name="password" placeholder="Password">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="registerConfirmationPassword">Confirm your Password</label>
+                    <input type="password" class="form-control" id="registerConfirmationPassword" name="confirmation" placeholder="Re-enter your password">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>       
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

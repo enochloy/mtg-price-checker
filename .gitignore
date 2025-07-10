@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Flask-specific
+.flaskenv
+.env
+
+# Database files
+*.db
+db/
+
+# IDE files
+.vscode/
+.idea/
+
+# Flask Session files
+flask_session*
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
