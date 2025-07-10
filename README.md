@@ -5,7 +5,7 @@ This project/website was built for the convenient sourcing of the cheapest MTG c
 
 - `app.py`: This is the main flask file that handles incoming HTTPS requests.
 - `helpers.py`: This contains the helper functions for returning invalid requests and login.
-- `scraping.ipynb`: This is the jupyter source file that has the code for scraping data off the store websites.
+- `scraping.py`: This is the python file for scraping data off the store websites.
 - `apology.html`: Template for invalid requests
 - `changepassword.html`: Template for changing passwords
 - `login.html`: Template for logging in
@@ -19,9 +19,9 @@ This project/website was built for the convenient sourcing of the cheapest MTG c
 
 ### Features
 <b>Data Scraping</b>
-- Utilized BeautifulSoup and Selenium packages to scrape cards data off 3 store websites (Agora, OneMTG, CardsCitadel).
+- Utilized BeautifulSoup and Selenium packages to scrape cards data off 4 store websites (Agora, OneMTG, CardsCitadel, Grey Ogre).
 - Using Pandas and SQLite3, I concatenated the data together and imported it as a `cards.db`
-- The jupyter notebook file can be run again to refresh data scraped from this websites
+- The web scraping script can be run again to refresh data scraped from this websites
 
 <b>Website Design</b>
 - The singles checker function allow users to key in the card name, and it automatically returns the top 20 cheapest cards that matches their search query. There are also checkboxes available to allow users to pick which stores they want to include/exclude in the search query.

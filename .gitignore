@@ -22,5 +22,6 @@ db/
 # Flask Session files
 flask_session*
 
-# Jupyter Notebook checkpoints
+# Jupyter Notebook files
 .ipynb_checkpoints/
+*.ipynb
